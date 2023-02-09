@@ -17,4 +17,5 @@ body = ""
 for article in content["articles"]:
       body = body + article["title"] + "\n" + article["description"] + 2*"\n"
 
+body = body.encode("utf-8")
 send_email(message=body)
